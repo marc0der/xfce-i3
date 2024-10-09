@@ -1,32 +1,26 @@
+---
 name: xfce-i3
-description: My own spin of Fedora Atomic uCore that runs XFCE4 and i3 tiling window manager
+description: My own spin of Fedora Atomic uCore with XFCE4 and i3
 
 base-image: ghcr.io/ublue-os/ucore
-image-version: 40  
+image-version: stable
 
 modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
+        destination: /
   - type: rpm-ostree
-    repos:
-    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
-      - starship
-    remove:
-      - firefox
-      - firefox-langpacks
-
+      - fedora-release-xfce
+      - fedora-release-ostree-desktop
+      - i3
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: true
     system:
-      # If no repo information is specified, Flathub will be used by default
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
-      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-title: "Flathub (system-wide)"
       install:
         - com.brave.Browser
-      
   - type: signing
