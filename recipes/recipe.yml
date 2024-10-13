@@ -12,7 +12,7 @@ modules:
         destination: /
   - type: rpm-ostree
     install:
-      - xfce-desktop
+      - fedora-release-xfce
       - i3
   - type: default-flatpaks
     notify: true
