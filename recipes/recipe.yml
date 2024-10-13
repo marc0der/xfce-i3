@@ -2,8 +2,8 @@
 name: xfce-i3
 description: My own spin of Fedora Atomic uCore with XFCE4 and i3
 
-base-image: ghcr.io/ublue-os/ucore
-image-version: stable
+base-image: quay.io/fedora-ostree-desktops/base
+image-version: 40
 
 modules:
   - type: files
@@ -12,8 +12,7 @@ modules:
         destination: /
   - type: rpm-ostree
     install:
-      - fedora-release-xfce
-      - fedora-release-ostree-desktop
+      - xfce-desktop
       - i3
   - type: default-flatpaks
     notify: true
