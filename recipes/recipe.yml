@@ -1,6 +1,6 @@
 ---
 name: xfce-i3
-description: My own spin of Fedora Atomic uCore with XFCE4 and i3
+description: My own spin of Fedora Atomic desktop base with XFCE and i3
 
 base-image: quay.io/fedora-ostree-desktops/base
 image-version: 40
@@ -13,6 +13,65 @@ modules:
   - type: rpm-ostree
     install:
       - fedora-release-xfce
+      - fedora-release-ostree-desktop
+      - xdg-desktop-portal-gtk
+      - atril
+      - galculator
+      - mousepad
+      - ristretto
+      - xarchiver
+      - xfce4-battery-plugin
+      - xfce4-clipman-plugin
+      - xfce4-cpugraph-plugin
+      - xfce4-genmon-plugin
+      - xfce4-weather-plugin
+      - xfce4-whiskermenu-plugin
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-vpnc-gnome
+      - Thunar
+      - adwaita-gtk2-theme
+      - adwaita-icon-theme
+      - blueman
+      - desktop-backgrounds-compat
+      - gnome-keyring-pam
+      - greybird-dark-theme
+      - greybird-light-theme
+      - greybird-xfce4-notifyd-theme
+      - greybird-xfwm4-theme
+      - gtk-xfce-engine
+      - gvfs
+      - gvfs-archive
+      - gvfs-mtp
+      - initial-setup-gui
+      - lightdm-gtk
+      - mint-y-theme
+      - network-manager-applet
+      - nm-connection-editor
+      - thunar-archive-plugin
+      - thunar-media-tags-plugin
+      - thunar-volman
+      - xdg-user-dirs-gtk
+      - xfce4-about
+      - xfce4-appfinder
+      - xfce4-datetime-plugin
+      - xfce4-panel
+      - xfce4-panel-profiles
+      - xfce4-places-plugin
+      - xfce4-power-manager
+      - xfce4-pulseaudio-plugin
+      - xfce4-screensaver
+      - xfce4-screenshooter-plugin
+      - xfce4-session
+      - xfce4-settings
+      - xfce4-taskmanager
+      - xfce4-terminal
+      - xfconf
+      - xfdesktop
+      - xfwm4
+      - xfwm4-themes
       - i3
   - type: default-flatpaks
     notify: true
