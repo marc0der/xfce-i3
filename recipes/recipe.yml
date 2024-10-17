@@ -79,5 +79,8 @@ modules:
       repo-name: flathub
       repo-title: "Flathub (system-wide)"
       install:
+        - com.borgbase.Vorta
         - com.brave.Browser
+        - com.jetbrains.IntelliJ-IDEA-Ultimate
+        - com.plexamp.Plexamp
   - type: signing
