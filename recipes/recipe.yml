@@ -12,7 +12,6 @@ modules:
         destination: /
   - type: rpm-ostree
     install:
-      - fedora-release-xfce
       - fedora-release-ostree-desktop
       - xdg-desktop-portal-gtk
       - atril
