@@ -16,6 +16,11 @@ modules:
       - rofi
       - picom
       - neovim
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
   - type: default-flatpaks
     notify: true
     system:
@@ -25,6 +30,8 @@ modules:
       install:
         - com.borgbase.Vorta
         - com.brave.Browser
+        - com.discordapp.Discord
         - com.jetbrains.IntelliJ-IDEA-Ultimate
         - com.plexamp.Plexamp
+        - com.valvesoftware.Steam
   - type: signing
