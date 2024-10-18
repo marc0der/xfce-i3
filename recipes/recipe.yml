@@ -17,8 +17,10 @@ modules:
       - lightdm
       - slick-greeter
       - i3
+      - i3status
       - rofi
       - picom
+      - zsh
       - neovim
       - docker-ce
       - docker-ce-cli
