@@ -11,11 +11,18 @@ modules:
       - source: system
         destination: /
   - type: rpm-ostree
+    repos:
+      - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       - i3
       - rofi
       - picom
       - neovim
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
   - type: default-flatpaks
     notify: true
     system:
