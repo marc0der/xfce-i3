@@ -14,7 +14,8 @@ modules:
     install:
       - i3
       - rofi
-      - nvim
+      - picom
+      - neovim
   - type: default-flatpaks
     notify: true
     system:
