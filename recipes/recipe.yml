@@ -27,7 +27,6 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
       - power-profiles-daemon
-      - tlp
     remove:
       - lightdm-gtk
   - type: default-flatpaks
